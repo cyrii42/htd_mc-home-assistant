@@ -54,6 +54,7 @@ class HtdMcClient:
 
             # go through each zone
             for i in zones:
+                success = True   ## Added by ZMV; seems to fix the bug
                 success = self.parse_message(cmd, i, zone_number) or success
 
             if not success:
